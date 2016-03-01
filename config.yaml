@@ -1,0 +1,5 @@
+options:
+  container-image:
+    type: string
+    default: lazypower/logspout-logstash
+    description: Container to pull from the configured registry

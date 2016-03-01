@@ -1,0 +1,2 @@
+generate-logspam:
+  description: Generate log data to test logspout's functionality on a deployment

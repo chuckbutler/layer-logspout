@@ -1,0 +1,4 @@
+includes: ["layer:docker", "interface:logstash-client"]
+metadata:
+  deletes:
+    - provides

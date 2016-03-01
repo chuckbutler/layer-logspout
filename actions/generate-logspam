@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -ex
+
+# This generates 1..2000 in tty output, the intention is to illustrate the latency
+# of messaging to logstash => elasticsearch => kibana visualizations.
+#
+# this is simply a utilty method used for validation of the cluster setup
+
+docker_image=$(docker run -d debian:jessie bash -c 'for i in {0..2000}; do echo $i; done')
+sleep 15;
+docker rm $docker_image

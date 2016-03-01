@@ -1,0 +1,9 @@
+logspout:
+  image: {{container_image}}
+  ports:
+    - 8000:8000
+  volumes:
+    - /var/run/docker.sock:/tmp.docker.sock
+  restart: always
+  environment:
+    ROUTE_URIS: logstash://{{private_address}}:{{udp_port}}
