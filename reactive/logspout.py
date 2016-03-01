@@ -29,6 +29,7 @@ def configure_logspout(logstash):
                'udp_port': logstash.udp_port(),
                'container_image': config('container-image')}
     render(src, tgt, context)
+    remove_state('logstash.available')
     set_state('logspout.ready')
 
 
