@@ -11,11 +11,11 @@ can process and ship log events to a remote source, such as logstash!
 
 ## Deployment
 
-     juju deploy ~lazypower/bundle/logstash-core
-     juju deploy trusty/docker
-     juju deploy trusty/logspout
-     juju add-relation logspout docker
-     juju add-relation logspout logstash
+    juju deploy ~lazypower/bundle/logstash-core
+    juju deploy trusty/docker
+    juju deploy trusty/logspout
+    juju add-relation logspout docker
+    juju add-relation logspout logstash
 
 You can test that the entire logging pipeine is working by invoking the
 `generate-logspam` action on one of the logspout hosts
